@@ -1,9 +1,9 @@
-#include <iostream.h>
+#include <iostream>
 #include <string.h> 
 using namespace std;
 class student
 {
-    int roll;
+    int roll;  
     char name[20];
 
 public:
