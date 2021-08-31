@@ -1,0 +1,29 @@
+import turtle
+t=turtle.Turtle()
+d=dict()
+for k in range(101):
+    l=list()
+    n=k
+    c=0
+    count=0
+    for i in range(n):
+        if(c==0):
+            l.append(0)
+        elif(c==1):
+            l.append(1)
+        else:
+            l.append(l[c-1]+l[c-2])
+        c+=1
+    for i in range(n):
+        for j in range(n):
+            if (i+j) in l :
+                # print("#",end=" ")
+                count+=1
+            else:
+                # print(" ",end=" ")
+                pass
+        # print("\n") 
+    if(k not in d):
+        d[k]=count
+for i in l:
+    turtle.circle(i**(0.5))
